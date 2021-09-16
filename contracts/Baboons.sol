@@ -89,7 +89,7 @@ contract Baboons is ERC721Enumerable, Ownable {
 
     function buy(
         bytes32 hash,
-        bytes memory signature,
+        // bytes memory signature,
         string memory nonce,
         uint256 tokenQuantity
     ) external payable {

@@ -60,7 +60,15 @@ contract SRKFactory is FactoryERC721, Ownable {
         srkNFT.mintTo(_toAddress);
     }
 
-    function canMint() public view returns (uint256 _optionId, bool) {
+    function canMint(uint256 _optionId)
+        public
+        view
+        override
+        returns (
+            // uint256 _optionId,
+            bool
+        )
+    {
         SharkNFT srkNFT = SharkNFT(nftAddress);
         uint256 creatureSupply = srkNFT.totalSupply();
 
