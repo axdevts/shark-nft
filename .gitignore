@@ -1,0 +1,11 @@
+node_modules
+build
+
+artifacts
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.sit
+.env.uat
