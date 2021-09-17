@@ -1,7 +1,7 @@
-const SharkNFT = artifacts.require("./SharkNFT.sol");
+// const SharkNFT = artifacts.require("./SharkNFT.sol");
 const Baboons = artifacts.require("./Baboons.sol");
-const SRKFactory = artifacts.require("./SRKFactory.sol");
-const SharkAccessControls = artifacts.require("./SharkAccessControls.sol");
+// const SRKFactory = artifacts.require("./SRKFactory.sol");
+// const SharkAccessControls = artifacts.require("./SharkAccessControls.sol");
 // const Presale = artifacts.require("./Presale.sol")
 
 module.exports = async (deployer, network, addresses) => {
