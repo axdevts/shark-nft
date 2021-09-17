@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.4;
+pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
@@ -22,7 +22,9 @@ contract Baboons is ERC721Enumerable, Ownable {
     mapping(string => bool) private _usedNonces;
 
     string private _contractURI;
-    string private _tokenBaseURI = "https://baboons.gg/api/metadata/";
+    string private _tokenBaseURI =
+        "https://opensea-creatures-api.herokuapp.com/api/";
+    // string private _tokenBaseURI = "https://baboons.gg/api/metadata/";
     // address private _artistAddress = 0xea68212b0450A929B14726b90550933bC12fF813;
     // address private _signerAddress = 0x7e3999B106E4Ef472E569b772bF7F7647D8F26Ba;
 
@@ -172,11 +174,11 @@ contract Baboons is ERC721Enumerable, Ownable {
     }
 
     function togglePresaleStatus() external onlyOwner {
-        presaleLive = !presaleLive;
+        presaleLive = false;
     }
 
     function toggleSaleStatus() external onlyOwner {
-        saleLive = !saleLive;
+        saleLive = true;
     }
 
     // function setSignerAddress(address addr) external onlyOwner {
