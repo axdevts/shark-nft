@@ -1,10 +1,15 @@
 const { ethers } = require("hardhat");
 
 async function main() {
-  const Instance = await ethers.getContractFactory("CarbonCreatures");
-  const contract = await Instance.deploy();
-  console.log("Box deployed to:", contract.address);
-  await contract.startPreParty();
+	let wallets = await ethers.getSigners()
+	const Instance = await ethers.getContractFactory("Baboons");
+	const contract = await Instance.deploy();
+	await contract.togglePresaleStatus();
+	await contract.toggleSaleStatus();
+	await contract.addToPresaleList([wallet[0].address]);
+
+	console.log("Box deployed to:", contract.address);
+	await contract.startPreParty();
 }
 
 main();
