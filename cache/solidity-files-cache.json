@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/apple/Documents/Work/full-house/test/hardhat/contracts/Baboons.sol": {
-      "lastModificationDate": 1631896423360,
-      "contentHash": "f5d4d6f0376a469afb4e695d9f4a562d",
+      "lastModificationDate": 1631901331442,
+      "contentHash": "aca5220235b2a675529ea55f329dfeaa",
       "sourceName": "contracts/Baboons.sol",
       "solcConfig": {
         "version": "0.8.0",
@@ -503,10 +503,10 @@
         "IERC721Enumerable"
       ]
     },
-    "/Users/apple/Documents/Work/full-house/test/hardhat/contracts/CarbonCreatures.sol": {
-      "lastModificationDate": 1631896423361,
-      "contentHash": "b60fe12fdf8fcc4dbc92e862dc192927",
-      "sourceName": "contracts/CarbonCreatures.sol",
+    "/Users/apple/Documents/Work/full-house/test/hardhat/contracts/Migrations.sol": {
+      "lastModificationDate": 1631898372566,
+      "contentHash": "63f1390b4fcd825d2b77dd8f36f426c3",
+      "sourceName": "contracts/Migrations.sol",
       "solcConfig": {
         "version": "0.8.0",
         "settings": {
@@ -534,22 +534,7 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "Address",
-        "CarbonCreatures",
-        "Context",
-        "ERC165",
-        "ERC721",
-        "ERC721Enumerable",
-        "ERC721URIStorage",
-        "IERC165",
-        "IERC721",
-        "IERC721Enumerable",
-        "IERC721Metadata",
-        "IERC721Receiver",
-        "Ownable",
-        "ReentrancyGuard",
-        "SafeMath",
-        "Strings"
+        "Migrations"
       ]
     }
   }

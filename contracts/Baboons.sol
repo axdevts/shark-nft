@@ -90,19 +90,19 @@ contract Baboons is ERC721Enumerable, Ownable {
     // }
 
     function buy(
-        bytes32 hash,
+        // bytes32 hash,
         // bytes memory signature,
-        string memory nonce,
+        // string memory nonce,
         uint256 tokenQuantity
     ) external payable {
         require(saleLive, "SALE_CLOSED");
         require(!presaleLive, "ONLY_PRESALE");
         // require(matchAddresSigner(hash, signature), "DIRECT_MINT_DISALLOWED");
-        require(!_usedNonces[nonce], "HASH_USED");
-        require(
-            hashTransaction(msg.sender, tokenQuantity, nonce) == hash,
-            "HASH_FAIL"
-        );
+        // require(!_usedNonces[nonce], "HASH_USED");
+        // require(
+        //     hashTransaction(msg.sender, tokenQuantity, nonce) == hash,
+        //     "HASH_FAIL"
+        // );
         require(totalSupply() < SVS_MAX, "OUT_OF_STOCK");
         // require(
         // publicAmountMinted + tokenQuantity <= SVS_PUBLIC,
@@ -116,7 +116,7 @@ contract Baboons is ERC721Enumerable, Ownable {
             _safeMint(msg.sender, totalSupply() + 1);
         }
 
-        _usedNonces[nonce] = true;
+        // _usedNonces[nonce] = true;
     }
 
     function presaleBuy(uint256 tokenQuantity) external payable {
@@ -174,11 +174,11 @@ contract Baboons is ERC721Enumerable, Ownable {
     }
 
     function togglePresaleStatus() external onlyOwner {
-        presaleLive = false;
+        presaleLive = !presaleLive;
     }
 
     function toggleSaleStatus() external onlyOwner {
-        saleLive = true;
+        saleLive = !saleLive;
     }
 
     // function setSignerAddress(address addr) external onlyOwner {
