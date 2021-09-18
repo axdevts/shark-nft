@@ -109,7 +109,7 @@ contract Baboons is ERC721Enumerable, Ownable {
         // "EXCEED_PUBLIC"
         // );
         require(tokenQuantity <= SVS_PER_MINT, "EXCEED_SVS_PER_MINT");
-        require(SVS_PRICE * tokenQuantity <= msg.value, "INSUFFICIENT_ETH");
+        // require(SVS_PRICE * tokenQuantity <= msg.value, "INSUFFICIENT_ETH");
 
         for (uint256 i = 0; i < tokenQuantity; i++) {
             publicAmountMinted++;

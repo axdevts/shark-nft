@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/apple/Documents/Work/full-house/test/hardhat/contracts/Baboons.sol": {
-      "lastModificationDate": 1631901331442,
-      "contentHash": "aca5220235b2a675529ea55f329dfeaa",
+      "lastModificationDate": 1631978907328,
+      "contentHash": "2a98abbf3ea2a980beea7cc2f9239a97",
       "sourceName": "contracts/Baboons.sol",
       "solcConfig": {
         "version": "0.8.0",
