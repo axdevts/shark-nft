@@ -1,10 +1,44 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/apple/Documents/Work/full-house/test/hardhat/contracts/Baboons.sol": {
-      "lastModificationDate": 1631978907328,
-      "contentHash": "2a98abbf3ea2a980beea7cc2f9239a97",
-      "sourceName": "contracts/Baboons.sol",
+    "/Users/apple/Documents/Work/full-house/test/hardhat/contracts/Migrations.sol": {
+      "lastModificationDate": 1631898372566,
+      "contentHash": "63f1390b4fcd825d2b77dd8f36f426c3",
+      "sourceName": "contracts/Migrations.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Migrations"
+      ]
+    },
+    "/Users/apple/Documents/Work/full-house/test/hardhat/contracts/SharkNFT.sol": {
+      "lastModificationDate": 1631994625440,
+      "contentHash": "b19ec231f77a03c15e58f01f3b00a50a",
+      "sourceName": "contracts/SharkNFT.sol",
       "solcConfig": {
         "version": "0.8.0",
         "settings": {
@@ -37,7 +71,7 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "Baboons"
+        "SharkNFT"
       ]
     },
     "/Users/apple/Documents/Work/full-house/test/hardhat/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
@@ -501,40 +535,6 @@
       ],
       "artifacts": [
         "IERC721Enumerable"
-      ]
-    },
-    "/Users/apple/Documents/Work/full-house/test/hardhat/contracts/Migrations.sol": {
-      "lastModificationDate": 1631898372566,
-      "contentHash": "63f1390b4fcd825d2b77dd8f36f426c3",
-      "sourceName": "contracts/Migrations.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 10
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Migrations"
       ]
     }
   }

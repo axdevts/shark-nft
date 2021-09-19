@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
-contract Baboons is ERC721Enumerable, Ownable {
+contract SharkNFT is ERC721Enumerable, Ownable {
     using Strings for uint256;
     using ECDSA for bytes32;
 
@@ -24,7 +24,7 @@ contract Baboons is ERC721Enumerable, Ownable {
     string private _contractURI;
     string private _tokenBaseURI =
         "https://opensea-creatures-api.herokuapp.com/api/";
-    // string private _tokenBaseURI = "https://baboons.gg/api/metadata/";
+    // string private _tokenBaseURI = "https://SharkNFT.gg/api/metadata/";
     // address private _artistAddress = 0xea68212b0450A929B14726b90550933bC12fF813;
     // address private _signerAddress = 0x7e3999B106E4Ef472E569b772bF7F7647D8F26Ba;
 
@@ -37,7 +37,7 @@ contract Baboons is ERC721Enumerable, Ownable {
     bool public saleLive;
     bool public locked;
 
-    constructor() ERC721("Baboons", "BNS") {}
+    constructor() ERC721("SharkNFT", "BNS") {}
 
     modifier notLocked() {
         require(!locked, "Contract metadata methods are locked");

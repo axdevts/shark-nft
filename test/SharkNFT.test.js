@@ -13,16 +13,16 @@ let account1;
 let reserveAddress;
 const testuri = 'testuri';
 
-describe("Baboons", () => {
+describe("SharkNFT", () => {
 	before(async () => {
 		let wallets = await ethers.getSigners()
 		owner = wallets[0]
 		account1 = wallets[1]
 		reserveAddress = wallets[2]
-		baboonsInstance = await ethers.getContractFactory('Baboons')
+		sharkNFTInstance = await ethers.getContractFactory('SharkNFT')
 	})
 	beforeEach(async () => {
-		nft = await baboonsInstance.deploy();
+		nft = await sharkNFTInstance.deploy();
 	})
 	// describe("presale mint feature", async () => {
 	// 	it('should success on presale mint', async () => {
