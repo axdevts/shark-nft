@@ -14,12 +14,13 @@ contract SharkNFT is ERC721Enumerable, Ownable {
     // uint256 public constant SVS_PRIVATE = 800;
     // uint256 public constant SVS_PUBLIC = 8000;
     uint256 public constant SVS_MAX = 7777;
-    uint256 public constant SVS_PRICE = 0.07 ether;
+    uint256 public SVS_PRICE = 0.07 ether;
     uint256 public constant SVS_PER_MINT = 5;
 
     mapping(address => bool) public presalerList;
     mapping(address => uint256) public presalerListPurchases;
     mapping(string => bool) private _usedNonces;
+    mapping(uint256 => string) public metadataUris;
 
     string private _contractURI;
     string private _tokenBaseURI =
@@ -132,6 +133,21 @@ contract SharkNFT is ERC721Enumerable, Ownable {
             presalerListPurchases[msg.sender]++;
             _safeMint(msg.sender, totalSupply() + 1);
         }
+    }
+
+    function getAmount() external view onlyOwner returns (uint256) {
+        return (SVS_MAX - publicAmountMinted - privateAmountMinted);
+    }
+
+    function setPrice(uint256 _price) external onlyOwner {
+        SVS_PRICE = _price;
+    }
+
+    function updateMetadatauri(uint256 tokenId, string calldata uri)
+        external
+        onlyOwner
+    {
+        metadataUris[tokenId] = uri;
     }
 
     function gift(address[] calldata receivers) external onlyOwner {
