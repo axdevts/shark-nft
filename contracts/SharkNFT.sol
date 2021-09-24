@@ -30,6 +30,7 @@ contract SharkNFT is ERC721Enumerable, Ownable {
     // address private _signerAddress = 0x7e3999B106E4Ef472E569b772bF7F7647D8F26Ba;
 
     string public proof;
+    uint256 public tokenIdAmount;
     uint256 public giftedAmount;
     uint256 public publicAmountMinted;
     uint256 public privateAmountMinted;
@@ -87,7 +88,7 @@ contract SharkNFT is ERC721Enumerable, Ownable {
         // bytes memory signature,
         // string memory nonce,
         uint256 tokenQuantity,
-        bytes memory _data
+        string[] calldata uris
     ) external payable {
         require(saleLive, "SALE_CLOSED");
         require(!presaleLive, "ONLY_PRESALE");
@@ -107,7 +108,8 @@ contract SharkNFT is ERC721Enumerable, Ownable {
 
         for (uint256 i = 0; i < tokenQuantity; i++) {
             publicAmountMinted++;
-            _safeMint(msg.sender, totalSupply() + 1, _data);
+            metadataUris[tokenIdAmount] = uris[i];
+            _safeMint(msg.sender, totalSupply() + 1);
         }
 
         // _usedNonces[nonce] = true;
