@@ -35,45 +35,6 @@
         "Migrations"
       ]
     },
-    "/Users/apple/Documents/Work/full-house/test/hardhat/contracts/SharkNFT.sol": {
-      "lastModificationDate": 1632914104209,
-      "contentHash": "ae795220786ba7ee5fa06009c9ea0f3c",
-      "sourceName": "contracts/SharkNFT.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 10
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
-        "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
-        "@openzeppelin/contracts/access/Ownable.sol",
-        "@openzeppelin/contracts/utils/cryptography/ECDSA.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "SharkNFT"
-      ]
-    },
     "/Users/apple/Documents/Work/full-house/test/hardhat/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
       "lastModificationDate": 1631896593321,
       "contentHash": "a4f6dccf3f15b6844e357f737a572388",
@@ -535,6 +496,45 @@
       ],
       "artifacts": [
         "IERC721Enumerable"
+      ]
+    },
+    "/Users/apple/Documents/Work/full-house/test/hardhat/contracts/BaboonBrigade.sol": {
+      "lastModificationDate": 1632914561725,
+      "contentHash": "b9cdd91d2eda2f94ea5eb34060c2d009",
+      "sourceName": "contracts/BaboonBrigade.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/utils/cryptography/ECDSA.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "BaboonBrigade"
       ]
     }
   }

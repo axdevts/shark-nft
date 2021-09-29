@@ -33,7 +33,7 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
     bool public saleLive;
     bool public locked;
 
-    constructor() ERC721("BaboonBrigade", "BNS") {}
+    constructor() ERC721("BaboonBrigade", "BBG") {}
 
     // metadata methods
     modifier notLocked() {
