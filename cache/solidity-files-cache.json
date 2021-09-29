@@ -499,8 +499,8 @@
       ]
     },
     "/Users/apple/Documents/Work/full-house/test/hardhat/contracts/BaboonBrigade.sol": {
-      "lastModificationDate": 1632914561725,
-      "contentHash": "b9cdd91d2eda2f94ea5eb34060c2d009",
+      "lastModificationDate": 1632914898760,
+      "contentHash": "d5499be4ca1e02d99ef05a9b94c2117b",
       "sourceName": "contracts/BaboonBrigade.sol",
       "solcConfig": {
         "version": "0.8.0",
