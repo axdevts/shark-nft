@@ -117,7 +117,7 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
     }
 
     // get total amount
-    function getAmount() external view onlyOwner returns (uint256) {
+    function getAmount() external view returns (uint256) {
         return (BBG_MAX - publicAmountMinted - privateAmountMinted);
     }
 
