@@ -106,7 +106,7 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
      * @notice Results a metadata uri
      * @param _tokenBaseURI token ID which need to be finished
     */
-	function setTokenBaseUri(string _tokenBaseURI) public {
+	function setTokenBaseUri(string memory _tokenBaseURI) public {
 		tokenBaseURI = _tokenBaseURI;
 	}
 
@@ -114,7 +114,7 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
      * @notice Results a company wallet address
      * @param addr change another wallet address from wallet address
     */
-	function setCompanyAddress(address addr) public onlyOwner {
+	function setCompanyAddress(address payable addr) public onlyOwner {
 		companyAddress = addr;
 	}
 }
