@@ -59,7 +59,6 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
 		onlyOwner
     {
         require(totalSupply() < BBG_MAX, "OUT_OF_STOCK");
-        require(tokenQuantity <= BBG_PER_MINT, "EXCEED_PER_MINT");
 		require(BBG_PRICE * tokenQuantity <= msg.value, "Not Enough payments");
 
         for (uint256 i = 0; i < tokenQuantity; i++) {
