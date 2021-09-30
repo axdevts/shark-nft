@@ -12,7 +12,7 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
 
     uint256 public constant BBG_MAX = 7777; // total amount
     uint256 public BBG_PRICE = 0.07 ether; // price per nft
-    uint256 public constant BBG_PER_MINT = 5; // limit mint
+    uint256 public constant BBG_PER_MINT = 10; // limit mint
 	address payable public companyAddress = payable(0x2d2DA12fFb23e1025d2490657e96289C37FC28B3); // company address
 
     string private tokenBaseURI =
