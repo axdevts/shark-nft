@@ -121,6 +121,6 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
      * @notice Results a max value can buy
     */
 	function getMaxValue() public view returns (uint256) {
-		return BBG_PER_MINT
+		return BBG_PER_MINT;
 	}
 }
