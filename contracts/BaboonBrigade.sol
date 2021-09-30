@@ -116,4 +116,11 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
 	function setCompanyAddress(address payable addr) public onlyOwner {
 		companyAddress = addr;
 	}
+
+	/**
+     * @notice Results a max value can buy
+    */
+	function getMaxValue() public view returns (uint256) {
+		return BBG_PER_MINT
+	}
 }
