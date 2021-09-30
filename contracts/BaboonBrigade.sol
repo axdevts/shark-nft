@@ -20,8 +20,8 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
 
     uint256 public totalMintedAmount;
 
-	event Mint(uint256 tokenId, address sender, uint amount);
-	event PrivateMint(uint256 tokenId, address sender, uint amount);
+	event PreSale(uint256 tokenId, address sender, uint amount);
+	event PrivatePreSale(uint256 tokenId, address sender, uint amount);
 
     constructor() ERC721("BaboonBrigade", "BBG") {}
 
@@ -31,7 +31,7 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
      * @dev Token Id can only be resulted if there has been a bidder and reserve met.
      * @param tokenQuantity token ID which need to be finished
     */
-    function mint(uint256 tokenQuantity)
+    function preSale(uint256 tokenQuantity)
         external
         payable
     {
@@ -43,7 +43,7 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
 			totalMintedAmount++;
             _safeMint(msg.sender, totalSupply() + 1);
 			companyAddress.transfer(msg.value);
-			emit Mint(totalMintedAmount, msg.sender, msg.value);
+			emit PreSale(totalMintedAmount, msg.sender, msg.value);
         }
     }
 
@@ -53,7 +53,7 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
      * @dev Token Id can only be resulted if there has been a bidder and reserve met.
      * @param tokenQuantity token ID which need to be finished
     */
-	function privateMint(uint256 tokenQuantity)
+	function privatePreSale(uint256 tokenQuantity)
         external
         payable
 		onlyOwner
@@ -66,7 +66,7 @@ contract BaboonBrigade is ERC721Enumerable, Ownable {
 			totalMintedAmount++;
             _safeMint(msg.sender, totalSupply() + 1);
 			companyAddress.transfer(msg.value);
-			emit PrivateMint(totalMintedAmount, msg.sender, msg.value);
+			emit PrivatePreSale(totalMintedAmount, msg.sender, msg.value);
         }
     }
 
