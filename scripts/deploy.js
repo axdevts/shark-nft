@@ -6,8 +6,6 @@ async function main() {
 	const walletAddress = "0x61Ca191FBBD213aFFD2a897D9BbB30547474849F";
 	const Instance = await ethers.getContractFactory("BaboonBrigade");
 	const contract = await Instance.deploy();
-	await contract.toggleSaleStatus();
-	await contract.addToPresaleList([walletAddress]);
 
 	console.log("Box deployed to:", contract.address);
 }
