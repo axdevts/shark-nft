@@ -18,6 +18,11 @@ module.exports = {
 			gas: 10000000,
 			accounts: { mnemonic: mnemonic }
 		},
+		ropsten: {
+			url: 'https://ropsten.infura.io/v3/' + infuraKey,
+			gas: 10000000,
+			accounts: { mnemonic: mnemonic }
+		},
 		testnet: {
 			url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
 			gas: 10000000,
